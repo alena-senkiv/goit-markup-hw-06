@@ -48,19 +48,17 @@
       <section class="section projects">
         <div class="container">
           <!-- Filter options -->
-          <div class="sort">
-            <form action="#" method="post">
-              <input class="sort-button" type="radio" name="filter" id="all" value="Все" placeholder="Все" checked />
-              <label class="sort-label" for="all">Все</label>
-              <input class="sort-button" type="radio" name="filter" id="web-site" value="Веб-сайты" />
-              <label class="sort-label" for="web-site">Веб-сайты</label>
-              <input class="sort-button" type="radio" name="filter" id="application" value="Приложения" />
-              <label class="sort-label" for="application">Приложения</label>
-              <input class="sort-button" type="radio" name="filter" id="design" value="Дизайн" />
-              <label class="sort-label" for="design">Дизайн</label>
-              <input class="sort-button" type="radio" name="filter" id="marketing" value="Маркетинг" />
-              <label class="sort-label" for="marketing">Маркетинг</label>
-            </form>
+          <div class="sort" role="group">
+            <input class="sort-button visually-hidden" type="radio" name="filter" id="all" value="Все" checked />
+            <label class="sort-label" for="all">Все</label>
+            <input class="sort-button visually-hidden" type="radio" name="filter" id="web-site" value="Веб-сайт" />
+            <label class="sort-label" for="web-site">Веб-сайты</label>
+            <input class="sort-button visually-hidden" type="radio" name="filter" id="application" value="Приложение" />
+            <label class="sort-label" for="application">Приложения</label>
+            <input class="sort-button visually-hidden" type="radio" name="filter" id="design" value="Дизайн" />
+            <label class="sort-label" for="design">Дизайн</label>
+            <input class="sort-button visually-hidden" type="radio" name="filter" id="marketing" value="Маркетинг" />
+            <label class="sort-label" for="marketing">Маркетинг</label>
           </div>
 
           <!-- Projects -->
@@ -211,7 +209,7 @@
             <a class="footer-adress-link" href="tel:+380961111111" aria-label="Позвонить по телефону +380961111111">+380961111111</a>
           </address>
         </div>
-        <div class="social-block">
+        <div class="social-block" role="group">
           <b class="request">Присоединяйтесь</b>
           <ul class="social-link">
             <li class="social-link-item">
@@ -246,13 +244,12 @@
         </div>
         <div>
           <b class="request">Подпишитесь на рассылку</b>
-          <form action="#" method="POST" id="subscribe">
-            <input class="input-email" type="email" name="subscribe" id="subscribe" placeholder="E-mail" autocomplete="on" required />
-            <button form="subscribe" type="submit" value="Подписаться" class="subscribe-button">Подписаться</button>
+          <form class="form-subscribe" action="#" method="POST" id="subscribe">
+            <input class="input-email" type="email" name="subscribe" placeholder="E-mail" autocomplete="on" required />
+            <button class="subscribe-button" form="subscribe" type="submit" value="Подписаться">Подписаться</button>
           </form>
         </div>
       </div>
-      <!-- <p class="copyright" lang="en">2020 | Developed by GoIT Students</p> -->
     </footer>
   </body>
 </html>

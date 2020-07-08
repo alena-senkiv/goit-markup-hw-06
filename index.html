@@ -49,7 +49,54 @@
       <section class="hero">
         <div class="hero-content">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a class="main-button" href="#">Заказать услугу</a>
+          <a class="main-button" href="#" data-open-modal>Заказать услугу</a>
+        </div>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <form class="form" method="POST" id="request" autocomplete="on">
+              <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+              <label class="form-field">
+                <input type="text" class="form-input" name="name" placeholder=" " autofocus />
+                <span class="form-label">Имя</span>
+                <span class="form-icon"
+                  ><svg class="icon">
+                    <use href="./images/icons/sprite.svg#user-name"></use></svg
+                ></span>
+              </label>
+              <label class="form-field">
+                <input type="tel" class="form-input" name="phone" placeholder=" " required />
+                <span class="form-label">Телефон</span>
+                <span class="form-icon"
+                  ><svg class="icon">
+                    <use href="./images/icons/sprite.svg#user-tel"></use></svg
+                ></span>
+              </label>
+              <label class="form-field">
+                <input type="email" class="form-input" name="mail" placeholder=" " autocomplete="email" />
+                <span class="form-label">Почта</span>
+                <span class="form-icon"
+                  ><svg class="icon">
+                    <use href="./images/icons/sprite.svg#user-mail"></use></svg
+                ></span>
+              </label>
+
+              <label class="form-field">
+                <textarea class="form-input form-comment" name="comment" placeholder=" "></textarea>
+                <span class="form-label">Комментарий</span>
+              </label>
+
+              <input class="checkbox-input visually-hidden" type="checkbox" name="agreement" id="policy" />
+              <label class="checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю <a class="link-policy" href="#"> Условия договора</a></label>
+
+              <button type="submit" value="Отправить заявку" class="send-button">Отправить</button>
+            </form>
+            <button class="close-form" form="request" type="button" aria-label="Закрыть" data-close-modal>
+              <svg class="icon-close">
+                <use href="./images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -334,7 +381,7 @@
             <a class="footer-adress-link" href="tel:+380961111111" aria-label="Позвонить по телефону +380961111111">+380961111111</a>
           </address>
         </div>
-        <div class="social-block">
+        <div class="social-block" role="group">
           <b class="request">Присоединяйтесь</b>
           <ul class="social-link">
             <li class="social-link-item">
@@ -369,13 +416,14 @@
         </div>
         <div>
           <b class="request">Подпишитесь на рассылку</b>
-          <form action="#" method="POST" id="subscribe">
-            <input class="input-email" type="email" name="subscribe" id="subscribe" placeholder="E-mail" autocomplete="on" required />
-            <button form="subscribe" type="submit" value="Подписаться" class="subscribe-button">Подписаться</button>
+          <form class="form-subscribe" action="#" method="POST" id="subscribe">
+            <input class="input-email" type="email" name="subscribe" placeholder="E-mail" autocomplete="on" required />
+            <button class="subscribe-button" form="subscribe" type="submit" value="Подписаться">Подписаться</button>
           </form>
         </div>
       </div>
-      <!-- <p class="copyright" lang="en">2020 | Developed by GoIT Students</p> -->
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
